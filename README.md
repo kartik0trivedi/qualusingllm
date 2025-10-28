@@ -8,7 +8,7 @@ A Quarto Reveal.js presentation exploring the usage and auditing of Large Langua
 **Date:** November 7, 2025, 4:00-5:00 PM  
 **Event:** [Relational Coordination Collaborative Roundtable 2025](https://heller.brandeis.edu/relational-coordination/roundtables/roundtable-2025-program.html), Boston, MA
 
-This presentation introduces LLMs for qualitative data analysis, discusses opportunities and risks, explores parameter sensitivity, and presents the MERIT framework for responsible AI usage in research.
+This presentation introduces LLMs for qualitative data analysis, discusses opportunities and risks, explores parameter sensitivity, and uses the established frameworks for responsible AI usage in research.
 
 ## Usage
 
@@ -32,4 +32,12 @@ quarto render slidedeck.qmd
 - `README.md` - This file
 
 Note: This presentation may be modified for future use.
+
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+You are free to share and adapt this material for any purpose, including commercial use, provided you give appropriate credit to the author.
+
+**Citation:** Trivedi, K. (2025). Interrogating with AI: Exploring the Usage of and Auditing of Large Language Models in Relational Coordination Research. RCC Roundtable 2025, Boston, MA.
 
