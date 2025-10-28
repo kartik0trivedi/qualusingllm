@@ -1,8 +1,8 @@
 ---
-title: "Harnessing Large Language Models for Qualitative Data Analysis"
-subtitle: "Responsible • Reflexive • Transparent Practice"
+title: "Interrogating with AI"
+subtitle: "Exploring the Usage of and Auditing of Large Language Models in Relational Coordination Research"
 author: "Kartik Trivedi"
-institute: "University of New Hampshire / RCC Roundtable"
+institute: "University of New Hampshire / RCC Roundtable 2025"
 date: Nov 7, 2025
 format:
   revealjs:
