@@ -16,9 +16,25 @@ This presentation introduces LLMs for qualitative data analysis, discusses oppor
 Open `slidedeck.html` in any web browser.
 
 ### Render from source
+
+**HTML version:**
 ```bash
 quarto render slidedeck.qmd
 ```
+
+**Beamer PDF version (recommended):**
+```bash
+quarto render slidedeck.qmd --to beamer
+```
+This generates `slidedeck.pdf` - a traditional LaTeX/Beamer slide deck.
+
+**PDF from Reveal.js (via browser):**
+1. Open `slidedeck.html` in a browser
+2. Press `?` to see keyboard shortcuts
+3. Press `Ctrl+P` (or `Cmd+P` on Mac) to open print dialog
+4. Select "Save as PDF"
+5. In Chrome/Edge: Enable "Background graphics" for best results
+6. Save the PDF
 
 ### Present
 - Press `S` for speaker notes during presentation
@@ -28,8 +44,11 @@ quarto render slidedeck.qmd
 ## Project Structure
 
 - `slidedeck.qmd` - Source file (Quarto markdown)
-- `slidedeck.html` - Rendered presentation
+- `slidedeck.html` - Rendered HTML/Reveal.js presentation
+- `slidedeck.pdf` - Rendered Beamer PDF presentation (after running `quarto render --to beamer`)
+- `slidedeck_files/` - Supporting files for HTML rendering
 - `README.md` - This file
+- `LICENSE` - CC BY 4.0 license file
 
 Note: This presentation may be modified for future use.
 

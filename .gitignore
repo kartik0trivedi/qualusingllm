@@ -3,6 +3,16 @@
 *_cache/
 .quarto/
 
+# PDF auxiliary files (but keep slidedeck.pdf)
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+slidedeck.tex
+
 # macOS
 .DS_Store
 

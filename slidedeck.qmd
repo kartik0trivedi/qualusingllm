@@ -7,6 +7,14 @@ date: Nov 7, 2025
 format:
   revealjs:
     theme: solarized
+  revealjs-pdf:
+    theme: solarized
+    pdf-max-pages: 50
+    incremental: false
+  beamer:
+    theme: metropolis
+    colortheme: default
+    incremental: false
 ---
 
 ## Agenda
