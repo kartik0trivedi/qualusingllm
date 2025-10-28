@@ -15,6 +15,12 @@ format:
     theme: metropolis
     colortheme: default
     incremental: false
+    include-in-header:
+      text: |
+        \usepackage{fontawesome5}
+        \usepackage{fontspec}
+        % Note: Emojis in markdown may not render in Beamer PDF
+        % They will appear in HTML/Reveal.js version
 ---
 
 ## Agenda
