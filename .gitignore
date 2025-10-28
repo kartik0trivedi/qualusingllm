@@ -1,0 +1,15 @@
+# Quarto output files
+*_files/
+*_cache/
+.quarto/
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
