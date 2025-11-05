@@ -1,0 +1,14 @@
+Interviewer: What’s it like using the AI tool during high-volume hiring seasons?
+Participant: Intense. We rely on it heavily, but that dependence creates tension. It shortlists quickly, but sometimes too narrowly. We end up revisiting its rejections when managers complain, so coordination between us and the system feels reactive, not proactive.
+
+Interviewer: How do you handle those tensions as a team?
+Participant: We started daily “syncs” where we compare the AI’s shortlist with our own intuition. It’s like checking a colleague’s work. When disagreements arise, we analyze patterns: Is it missing leadership cues? Over-weighting technical terms? Those discussions actually strengthened our team — we talk about decision logic more explicitly now.
+
+Interviewer: Sounds like shared knowledge building.
+Participant: Exactly. Before AI, we just said “She looks like a fit.” Now we unpack why. The AI forces us to articulate our criteria, which makes human collaboration richer.
+
+Interviewer: How about respect — between team and system?
+Participant: Funny question, but yes — we learned to respect the AI’s constraints. If it fails on qualitative traits, that’s not incompetence; it’s scope. We respect its speed and consistency, and it respects (in a metaphorical way) our ability to question its outputs.
+
+Interviewer: What’s your ideal relationship with such tools?
+Participant: A partnership of equals — each doing what we do best. The AI handles scale; we handle judgment. When both sides recognize each other’s role, the process feels smoother, even humane.

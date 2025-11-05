@@ -1,0 +1,14 @@
+Interviewer: What are your team’s goals when using AI for recruitment?
+Participant: Ideally, to find the most qualified candidate and to make the process fair. The AI helps standardize scoring, which we thought would reduce bias. But then we realized fairness isn’t just standardization — it’s context.
+
+Interviewer: How so?
+Participant: The system penalized résumé gaps, which hurt applicants with caregiving or disability breaks. We had to advocate for exceptions. That conversation with the vendor was tough — they saw “data integrity,” we saw “human nuance.” It reminded me that shared goals require translation between technical and human perspectives.
+
+Interviewer: How do you coordinate with the developers?
+Participant: We set up monthly reviews. They explain new features, we share edge cases. It’s collaborative now, but early on, it was like talking past each other — their language was precision, ours was inclusion. Once we created a shared glossary of terms, communication improved.
+
+Interviewer: Do you feel respected in that exchange?
+Participant: Increasingly, yes. Initially we felt unheard — “HR doesn’t understand models.” Now they invite us to co-design filters. That mutual respect changes the tone: it’s no longer humans correcting AI, but humans and AI evolving together.
+
+Interviewer: Any example where the AI improved after feedback?
+Participant: After we raised accessibility issues, the vendor added a “screen-reader friendly” mode and retrained the model on disability-inclusive language. That was a proud moment — proof that coordination leads to impact.

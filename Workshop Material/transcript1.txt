@@ -1,0 +1,14 @@
+Interviewer: How do you typically interact with the AI system during hiring?
+Participant: I see it as a team member of sorts. It does the first pass — ranking résumés, flagging keywords — and then I come in to sense-check. But I don’t always know why it ranked someone low. When I can’t trace its reasoning, it feels like working with a silent partner.
+
+Interviewer: Does that affect your trust?
+Participant: Definitely. Trust for me comes from dialogue. With colleagues, I can ask, “Why did you shortlist this candidate?” With the AI, that conversation is missing. If it could “talk back,” even just a note saying “This person lacked leadership keywords”, I’d feel more aligned.
+
+Interviewer: What happens when you disagree with it?
+Participant: I’ll override the recommendation, but I also document why — almost like mentoring the system. I think that’s part of coordination. If it’s wrong, I want future versions to learn from our exchange. But that feedback loop doesn’t exist yet.
+
+Interviewer: How do your teammates perceive the tool?
+Participant: Mixed feelings. Some see it as intrusive — “taking over HR judgment.” Others treat it like a colleague we have to train. In our meetings, we often say, “What did the AI miss this time?” So, in a strange way, it’s part of the conversation.
+
+Interviewer: Do you think mutual respect applies to technology?
+Participant: It should. Respect means recognizing strengths and limits. The AI is fast and unbiased about names, but it can’t sense human potential. Respecting its efficiency while asserting human discretion — that balance defines good coordination.

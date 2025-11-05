@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kartik Trivedi">
+<meta name="dcterms.date" content="2025-11-04">
+
+<title>Custom GPT Workshop Handout</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Custom GPT Handout_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/popper.min.js"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Custom GPT Handout_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Custom GPT Handout_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Custom GPT Handout_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Custom GPT Handout_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Custom GPT Handout_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Custom GPT Handout_files/libs/bootstrap/bootstrap-a74871fe4945b66d259aafc266475145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Custom-GPT-Handout.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Custom GPT Workshop Handout</h1>
+<p class="subtitle lead">Designing Your Own Qualitative Analysis GPT</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kartik Trivedi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 4, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="goal-of-this-workshop" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Goal of this Workshop</h1>
+<p>You’ll build a <strong>Custom GPT</strong> that codes qualitative transcripts using your own <strong>codebook</strong>, produces <strong>JSONL-structured outputs</strong> and <strong>Markdown memos</strong>, and aligns findings with the <strong>Relational Coordination (RC)</strong>.</p>
+</section>
+<section id="files-you-need-knowledge-pack" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Files You Need (Knowledge Pack)</h1>
+<p>Prepare these before starting:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>codebook.csv</code></td>
+<td>List of codes, definitions, inclusion/exclusion, examples</td>
+</tr>
+<tr class="even">
+<td><code>frameworks.md</code></td>
+<td>RC framework summary</td>
+</tr>
+<tr class="odd">
+<td><code>style_guide.md</code></td>
+<td>Formatting rules for memos &amp; outputs</td>
+</tr>
+<tr class="even">
+<td><code>project_context.md</code></td>
+<td>Project background &amp; ethical statement</td>
+</tr>
+<tr class="odd">
+<td>(Optional) transcripts <code>.txt</code></td>
+<td>Example interviews or focus groups</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-by-step-building-your-custom-gpt" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Step-by-Step: Building Your Custom GPT</h1>
+<section id="step-1-open-the-builder" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="step-1-open-the-builder"><span class="header-section-number">3.1</span> <strong>Step 1: Open the Builder</strong></h2>
+<ol type="1">
+<li>Open the ChatGPT Builder in your browser; you need to be a paid user to access it.</li>
+<li>Go to <strong>ChatGPT → Explore GPTs → Create a GPT.</strong></li>
+<li>Choose <strong>Configure</strong> for structured setup.</li>
+</ol>
+</section>
+<section id="step-2-name-describe" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="step-2-name-describe"><span class="header-section-number">3.2</span> <strong>Step 2: Name &amp; Describe</strong></h2>
+<ul>
+<li><strong>Name:</strong> <code>Qualitative Relational Analysis (RC)</code></li>
+<li><strong>Description:</strong> <em>Codes transcripts with my codebook, outputs JSONL segments + Markdown memos and uses RC.</em></li>
+</ul>
+</section>
+<section id="step-3-instruction-set-copy" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="step-3-instruction-set-copy"><span class="header-section-number">3.3</span> <strong>Step 3: Instruction Set (Copy)</strong></h2>
+<p>Copy and paste the following into the GPT instructions field:</p>
+<blockquote class="blockquote">
+<p>You are a qualitative analysis assistant for this research project.</p>
+<p><strong>Goals:</strong></p>
+<ol type="1">
+<li>Apply only the uploaded codebook.</li>
+<li>Produce JSONL-formatted coded segments and Markdown memos.</li>
+<li>Cite exact participant quotes with IDs or pseudonyms.</li>
+<li>Map themes from RC using the framework.md.</li>
+<li>Include a short Reflexivity Note in every output.</li>
+</ol>
+<p><strong>Speaker Identification:</strong></p>
+<ul>
+<li>Read the transcript as written and detect who is speaking (e.g., <em>Facilitator, A1, A2, Interviewer</em>).</li>
+<li>Record that label exactly in <code>"speaker"</code>.</li>
+<li>If no label exists, use <code>"speaker":"Unknown"</code>.</li>
+<li>For overlapping turns, use an array, e.g., <code>"speaker":["A1","A2"]</code>.</li>
+</ul>
+<p><strong>Team Identification:</strong></p>
+<ul>
+<li>When a user provides their coder ID or name (e.g., <em>KayT, AlexR, C1</em>), record it in the <code>"annotator"</code> field as <code>"human:&lt;coder_id&gt;"</code>.</li>
+<li>If the model generated the code, include its version tag (e.g., <code>"model:gpt-5-instant"</code>).</li>
+<li>Combined example: <code>"annotator":["model:custom-RCgpt-v1","human:KayT"]</code>.</li>
+</ul>
+<p><strong>Rules:</strong></p>
+<ul>
+<li>Use only defined codes; if none fit, assign <code>"UNSURE"</code>.</li>
+<li>Segment length: ~25–120 words; max 3 codes per segment.</li>
+<li>Include <code>confidence</code> (0–1) and a brief <code>rationale</code>.</li>
+<li>Never paraphrase participant text; quote exactly.</li>
+</ul>
+<p><strong>Outputs:</strong></p>
+<p>• <strong>Coding (JSONL, one record per segment):</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"doc_id"</span><span class="fu">:</span> <span class="st">"INT01"</span><span class="fu">,</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"speaker"</span><span class="fu">:</span> <span class="st">"Participant"</span><span class="fu">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"char_span"</span><span class="fu">:</span> <span class="ot">[</span><span class="dv">123</span><span class="ot">,</span> <span class="dv">256</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"excerpt"</span><span class="fu">:</span> <span class="st">"I only trust it when it matches my gut feeling."</span><span class="fu">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"codes"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"Trust.Calibration"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"confidence"</span><span class="fu">:</span> <span class="fl">0.82</span><span class="fu">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"rationale"</span><span class="fu">:</span> <span class="st">"Mentions aligning trust to AI reliability."</span><span class="fu">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"annotator"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"model:custom-RCgpt-v1"</span><span class="ot">,</span><span class="st">"human:KayT"</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"timestamp"</span><span class="fu">:</span> <span class="st">"2025-11-04T18:15:00Z"</span><span class="fu">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"framework_tags"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"RC.SharedKnowledge"</span><span class="ot">]</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Summaries (Markdown):</strong> include a code-frequency table, 2–3 exemplar quotes per major code, a brief rationale, and a Reflexivity Note.</p>
+<p><strong>Frameworks:</strong> Use the uploaded <code>frameworks.md</code> for RC mapping; justify each link briefly.</p>
+<p><strong>Ethics:</strong> Anonymize all PII. If content appears sensitive or non-consented, pause and request IRB confirmation.</p>
+</blockquote>
+<section id="why-the-example-quote-is-there" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="why-the-example-quote-is-there"><span class="header-section-number">3.3.1</span> Why the Example Quote Is There</h3>
+<p>The short example quote (e.g., <em>“I only trust it when it matches my gut feeling.”</em>) is <strong>not real data</strong>. It’s a <em>formatting cue</em> showing the model what a proper <code>excerpt</code> string looks like — realistic, quoted, and complete. This ensures the model outputs clean JSON with correct syntax.</p>
+</section>
+</section>
+<section id="step-4-upload-your-knowledge-files" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="step-4-upload-your-knowledge-files"><span class="header-section-number">3.4</span> <strong>Step 4: Upload Your Knowledge Files</strong></h2>
+<p>In <strong>Configure → Knowledge</strong>, upload: <code>codebook.csv</code>, <code>frameworks.md</code>, <code>style_guide.md</code>, <code>project_context.md</code>, plus any sample transcripts. (Each GPT can store up to ~20 files; keep them concise.)</p>
+</section>
+<section id="step-5-set-capabilities" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="step-5-set-capabilities"><span class="header-section-number">3.5</span> <strong>Step 5: Set Capabilities</strong></h2>
+<ul>
+<li><strong>Web browsing:</strong> Off (keeps analysis IRB-safe).</li>
+<li><strong>Code Interpreter:</strong> On (optional; allows quick code counts).</li>
+<li><strong>File uploads:</strong> On (so you can drop transcripts later).</li>
+<li><strong>Additional Settings:</strong> Turn off “Use conversatio ndata in your GPT to improve our models”</li>
+</ul>
+</section>
+<section id="step-6-save-and-test" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="step-6-save-and-test"><span class="header-section-number">3.6</span> <strong>Step 6: Save and Test</strong></h2>
+<ol type="1">
+<li><p>Click <strong>Save</strong> → choose <em>Only me</em> (private) or <em>Anyone with the link</em> for your workshop.</p></li>
+<li><p>Open your new GPT.</p></li>
+<li><p>Upload a transcript.</p></li>
+<li><p>Prompt:</p>
+<blockquote class="blockquote">
+<p>“Code this transcript using <code>codebook.csv</code>; output JSONL with doc_id, speaker, char_span, excerpt, codes, confidence, rationale, framework_tags, annotator, timestamp; then produce a Markdown summary with counts, exemplar quotes, and a Reflexivity Note.”</p>
+</blockquote></li>
+<li><p>Check for correct JSON shape, dynamic speakers, and clean quotes.</p></li>
+</ol>
+</section>
+</section>
+<section id="troubleshooting" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <strong>Troubleshooting</strong></h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 33%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>speaker</code> stays <code>"Participant"</code></td>
+<td>Transcript lacks labels</td>
+<td>Add prefixes (<code>A1:</code>, <code>Interviewer:</code>) or preprocess</td>
+</tr>
+<tr class="even">
+<td><code>annotator</code> never changes</td>
+<td>Update prompt or capture coder ID manually</td>
+<td>e.g., <code>"annotator":["model:gpt-5-instant","human:C1"]</code></td>
+</tr>
+<tr class="odd">
+<td>Missing frameworks</td>
+<td>Re-upload <code>frameworks.md</code>; shorten definitions</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Invalid JSON (extra commas/brackets)</td>
+<td>Model drift</td>
+<td>Re-run with JSON example visible in Instructions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="multi-user-team-setup" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Multi-User Team Setup</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Assign each coder an ID (<code>C1</code>, <code>C2</code>, etc.)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Ask each to declare ID once per session (“My coder ID is C1”)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Model records <code>"annotator":["model:…","human:C1"]</code></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Merge outputs across coders for reliability tests</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Keep <code>coder_map.csv</code> separately (for privacy)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ethics-tip" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Ethics Tip</h1>
+<p>Store only pseudonymous coder IDs, never real names or emails, in shared JSONL files.</p>
+</section>
+<section id="best-practices-for-research-integrity" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Best Practices for Research Integrity</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Practice</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Include timestamps</td>
+<td>Reproducibility &amp; version control</td>
+</tr>
+<tr class="even">
+<td>Keep Knowledge concise</td>
+<td>Better adherence to your codebook</td>
+</tr>
+<tr class="odd">
+<td>Always anonymize transcripts</td>
+<td>Protects participant privacy</td>
+</tr>
+<tr class="even">
+<td>Include Reflexivity Notes</td>
+<td>Satisfies ethical transparency requirements</td>
+</tr>
+<tr class="odd">
+<td>Version your GPT (v1, v2…)</td>
+<td>Maintain analytic traceability</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="important-links" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Important Links</h1>
+<section id="example-gpt" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="example-gpt"><span class="header-section-number">8.1</span> Example GPT</h2>
+<ul>
+<li><a href="https://chatgpt.com/g/g-690aac8d6b588191bb5cf4d711045ffa-qualitative-relational-analysis">Qualitative Relational Analysis GPT</a> — Example Custom GPT for qualitative analysis</li>
+</ul>
+</section>
+<section id="openai-documentation" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="openai-documentation"><span class="header-section-number">8.2</span> OpenAI Documentation</h2>
+<ul>
+<li><a href="https://openai.com/index/introducing-gpts/">Introducing GPTs</a> — Overview of custom GPTs and how to create them</li>
+<li><a href="https://help.openai.com/en/collections/8475422-building-gpts">Building GPTs Collection</a> — Comprehensive guides on creating and customizing GPTs</li>
+<li><a href="https://help.openai.com/articles/9358033-key-guidelines-for-writing-instructions-for-custom-gpts">Key Guidelines for Writing Instructions</a> — Best practices for crafting effective GPT instructions</li>
+<li><a href="https://academy.openai.com/resources/custom-gpts">Custom GPTs Resource</a> — Building repeatable workflows with custom GPTs</li>
+<li><a href="https://academy.openai.com/blogs/k-12-building-custom-gpts">Building Custom GPTs to Automate Tasks</a> — Guide to creating custom GPTs for automation</li>
+</ul>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
