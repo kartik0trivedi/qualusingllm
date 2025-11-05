@@ -15,12 +15,7 @@ format:
     theme: metropolis
     colortheme: default
     incremental: false
-    include-in-header:
-      text: |
-        \usepackage{fontawesome5}
-        \usepackage{fontspec}
-        % Note: Emojis in markdown may not render in Beamer PDF
-        % They will appear in HTML/Reveal.js version
+    keep-tex: true
 ---
 
 ## Agenda
@@ -34,7 +29,7 @@ Design note: Sticky-note icons for each section
 * Opportunities + risks in QDA
 * Prompt engineering & **parameter sensitivity**
 * The **MERIT** framework for responsible reporting
-* Hands-on with LLM tools
+* Hands-on with LLM tools (3 tools)
 * Reflection & Q&A
 
 ---
@@ -46,7 +41,7 @@ Emphasize they *predict*, not *understand*
 :::
 
 * AI trained on **massive** text data
-* Learns patterns → generates & interprets language
+* Learns patterns $\rightarrow$ generates \& interprets language
 * Can summarize, code, classify, compare
 * Examples: GPT-4, Claude, LLaMA
 
@@ -58,7 +53,7 @@ Emphasize they *predict*, not *understand*
 Design: diagram of transformer attention blocks
 :::
 
-* Billions of parameters → emergent reasoning
+* Billions of parameters $\rightarrow$ emergent reasoning
 * Transformer architecture ("attention")
 * Handles complexity & longer qualitative texts
 * Limitations: hallucinations, bias, data opacity
@@ -83,7 +78,7 @@ Sticky note reading: *Human interpretation is essential*
 :::
 
 * Interpretation, meaning, lived experience
-* Coding ➜ themes ➜ narrative
+* Coding $\rightarrow$ themes $\rightarrow$ narrative
 * Always reflexive & relational
 
 ---
@@ -94,21 +89,21 @@ Sticky note reading: *Human interpretation is essential*
 QDA is not just labeling — it is inquiry.
 :::
 
-1️⃣ Data familiarization
-2️⃣ Open/initial coding
-3️⃣ Theme development
-4️⃣ Interpretation & checking
-5️⃣ Reporting + reflexivity
+1. Data familiarization
+2. Open/initial coding
+3. Theme development
+4. Interpretation & checking
+5. Reporting + reflexivity
 
 ---
 
 ## Why Use LLMs for QDA?
 
-* ✅ First-pass coding + summarization
-* ✅ Handle large corpora
-* ✅ Cognitive support
-* ✅ Speed for iteration
-* ⚖️ Must maintain trustworthiness & participant dignity
+* First-pass coding + summarization
+* Handle large corpora
+* Cognitive support
+* Speed for iteration
+* Must maintain trustworthiness & participant dignity
 
 ---
 
@@ -126,14 +121,14 @@ Quote: "Tools are material agents entangled with us." (Leester & Paulus, 2024)
 
 ## Key Threats of GenAI
 
-* ⚠ Exploited data workers
-* ⚠ Environmental burden
-* ⚠ IP + consent issues
-* ⚠ Algorithmic bias
-* ⚠ Hallucination errors
-* ⚠ Loss of authenticity
+* Exploited data workers
+* Environmental burden
+* IP + consent issues
+* Algorithmic bias
+* Hallucination errors
+* Loss of authenticity
 
-➡ Engagement with AI is a **choice**, not a destiny
+Engagement with AI is a **choice**, not a destiny
 
 ---
 
@@ -165,8 +160,8 @@ Example prompts as sticky-note stack
 
 ## Prompt Sensitivity Example
 
-* **Prompt A** → high-level themes
-* **Prompt B** → structured codebook with quotes
+* **Prompt A** $\rightarrow$ high-level themes
+* **Prompt B** $\rightarrow$ structured codebook with quotes
 
 Differences are **methodological**, not cosmetic
 
@@ -192,9 +187,9 @@ Speaker note: "These are analytic levers."
 
 ## Example: Changing Findings
 
-🧪 Same transcript
-🧪 Same prompt
-🔧 Different parameters
+Same transcript
+Same prompt
+Different parameters
 
 | Temp 0.1              | Temp 0.9                    |
 | --------------------- | --------------------------- |
@@ -202,24 +197,9 @@ Speaker note: "These are analytic levers."
 | Conservative grouping | Diverse yet unstable themes |
 | High repeat           | Higher hallucination risk   |
 
-➡ Meaning changes
-➡ So must **report** settings
+Meaning changes
+So must **report** settings
 
----
-
-## Parameters & Rigor
-
-::: {.notes}
-Sticky note: **Document model version + date + parameters in your method section**
-:::
-
-Use **MERIT** to evaluate effects:
-
-| M | Methods shift with settings |
-| E | Whose perspectives are emphasized/silenced? |
-| R | Who validates decisions? |
-| I | Did quality improve or degrade? |
-| T | Is the tool transparent about settings? |
 
 ---
 
@@ -236,13 +216,13 @@ Use **MERIT** to evaluate effects:
 
 ## Summary of MERIT Framework
 
-* **M**ethods
-* **E**thics
-* **R**esponsibility
-* **I**mpact
-* **T**ool
+* **M**ethods: Methods shift with settings
+* **E**thics: Whose perspectives are emphasized/silenced?
+* **R**esponsibility: Who validates decisions?
+* **I**mpact: Did quality improve or degrade?
+* **T**ool: Is the tool transparent about settings?
 
-✨ A reflexive guide for **trustworthy** GenAI practices
+A reflexive guide for **trustworthy** GenAI practices
 
 ---
 
@@ -253,10 +233,23 @@ Instrument the inquiry, not automate it.
 :::
 
 You will:
-1️⃣ Run a baseline prompt
-2️⃣ Adjust parameters
-3️⃣ Compare changes
-4️⃣ Reflect using MERIT
+1. Run a baseline prompt
+2. Adjust parameters
+3. Compare changes
+4. Reflect using MERIT
+
+---
+
+## Developing your Custom GPT
+
+::: {.notes}
+Insert UI screenshots here
+:::
+
+1. Using ChatGPT Builder, create a custom GPT that codes transcripts with your own codebook, 
+2. Produces JSONL-structured outputs and memos
+3. Uses shared framework to map themes
+4. Maintains transparency in analytic decisions
 
 ---
 
@@ -275,20 +268,20 @@ Insert UI screenshots here
 
 ## Best Practices
 
-* ✅ Human-in-the-loop
-* ✅ Prompt logs saved
-* ✅ Model version + date recorded
-* ✅ Validate outputs manually
-* ✅ Member/peer checking
-* ✅ Consent for AI use with participant data
+* Human-in-the-loop
+* Prompt logs saved
+* Model version + date recorded
+* Validate outputs manually
+* Member/peer checking
+* Consent for AI use with participant data
 
 ---
 
 ## Reflection Discussion
 
-* 🗣 What worked?
-* 🤔 What didn't feel trustworthy?
-* 🛠 Where will GenAI enter *your* workflow responsibly?
+* What worked?
+* What didn't feel trustworthy?
+* Where will GenAI enter *your* workflow responsibly?
 
 ---
 
